@@ -1,0 +1,63 @@
+dn: ou=gerrit,dc=example,dc=com
+objectClass: organizationalUnit
+ou: gerrit
+description: All groups of gerrit.
+
+dn: ou=accounts,dc=example,dc=com
+objectClass: organizationalUnit
+ou: accounts
+description: All accounts' entries are under this group.
+
+dn: cn=group,ou=accounts,dc=example,dc=com
+objectClass: posixGroup
+cn: group
+description: group
+gidNumber: 10000
+
+dn: uid=admin,ou=accounts,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+homeDirectory: /home/gerrit
+loginShell: /bin/false
+gidNumber: 10000
+uid: admin
+cn: gerrit admin
+displayName: gerrit admin
+uidNumber: 10000
+sn: admin
+givenName: gerrit
+mail: admin@example.com
+
+dn: uid=dev1,ou=accounts,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+homeDirectory: /home/dev1
+loginShell: /bin/false
+gidNumber: 10000
+uid: dev1
+cn: gerrit developer 1
+displayName: gerrit developer 1
+uidNumber: 10001
+sn: admin
+givenName: dev1
+mail: dev1@example.com
+
+dn: uid=dev2,ou=accounts,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+homeDirectory: /home/dev2
+loginShell: /bin/false
+gidNumber: 10000
+uid: dev2
+cn: gerrit developer 2
+displayName: gerrit developer 2
+uidNumber: 10002
+sn: admin
+givenName: dev2
+mail: dev2@example.com
